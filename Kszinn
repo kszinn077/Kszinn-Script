@@ -1,5 +1,5 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/jensonhirst/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Kszinn Hub", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "Kszinn Hub", HidePremium = false, SaveConfig = true, IntroText = "Kszinn", ConfigFolder = "OrionTest"})
 
 local Tab1 = Window:MakeTab({
 	Name = "Anime Fighters",
@@ -61,6 +61,66 @@ local Tab10 = Window:MakeTab({
 	PremiumOnly = false
 })
 
+local Tab11 = Window:MakeTab({
+	Name = "Project Slayer",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Tab12 = Window:MakeTab({
+	Name = "Blade Ball",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Tab13 = Window:MakeTab({
+	Name = "Munder Mystery",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Tab14 = Window:MakeTab({
+	Name = "Sols rng",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Tab15 = Window:MakeTab({
+	Name = "Doors",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Tab16 = Window:MakeTab({
+	Name = "Pets Go",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Tab17 = Window:MakeTab({
+	Name = "Shindo Life",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Tab18 = Window:MakeTab({
+	Name = "JailBreak",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Tab19 = Window:MakeTab({
+	Name = "Strongert Battle",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Tab20 = Window:MakeTab({
+	Name = "Haikyuu Legends",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
 -- Tab1
 
 local Section = Tab1:AddSection({
@@ -88,7 +148,7 @@ local Section = Tab2:AddSection({
 })
 
 Tab2:AddButton({
-	Name = "W-Azure",
+	Name = "Aimbot",
 	Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Actyrn/Scripts/main/AzureModded"))()
   	end    
@@ -224,4 +284,148 @@ Tab10:AddButton({
 	Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
   	end    
+})
+
+-- Tab11
+
+local Section = Tab11:AddSection({
+	Name = "Project Slayer"
+})
+
+Tab11:AddButton({
+	Name = "Oni Hub",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Phyoue/Wlymalfrr/main/Wlymalfrr"))()
+  	end    
+})
+
+Tab11:AddButton({
+	Name = "Auto Dungeon Farm",
+	Callback = function()
+		loadstring(game:HttpGetAsync("https://gist.github.com/NotHubris/16fbe2bf8d9563e09858c5cd2c6fafce/raw"))()
+	end    
+})
+
+-- Tab12
+
+local Section = Tab12:AddSection({
+	Name = "Project Slayer"
+})
+
+Tab12:AddButton({
+	Name = "Chaotic",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Mc4121ban/trashscript/main/chaotic.lua"))()
+	end    
+})
+
+Tab12:AddButton({
+	Name = "Plutonium",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/PawsThePaw/Plutonium.AA/main/Plutonium.Loader.lua", true))()
+	end    
+})
+
+-- Tab13
+
+local Section = Tab13:AddSection({
+	Name = "Murder Mistery"
+})
+
+Tab13:AddButton({
+	Name = "Script 1",
+	Callback = function()
+		loadstring(game:HttpGet('https://darkscripts.space/scripts/1072446206241947649.lua',true))()
+	end    
+})
+
+-- Tab14
+
+local Section = Tab14:AddSection({
+	Name = "Souls Rng"
+})
+
+Tab14:AddButton({
+	Name = "Script 1",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Looser3itx/Hmmmmmmmmmmmmmmmmmmmmmmmmmmmm/main/loader.lua"))()
+	end    
+})
+
+-- Tab15
+
+local Section = Tab15:AddSection({
+	Name = "Doors"
+})
+
+Tab15:AddButton({
+	Name = "Script 1",
+	Callback = function()
+		loadstring(game:HttpGet(('https://pastebin.com/raw/9QPGnLx6'),true))()
+	end    
+})
+
+-- Tab16
+
+local Section = Tab16:AddSection({
+	Name = "Pets Go"
+})
+
+Tab16:AddButton({
+	Name = "Script 1",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/OhhMyGehlee/rel/refs/heads/main/el"))()
+	end    
+})
+
+-- Tab17
+
+local Section = Tab17:AddSection({
+	Name = "Shindo Life"
+})
+
+Tab17:AddButton({
+	Name = "Script 1",
+	Callback = function()
+		loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/ahmadsgamer2/Script--Game/main/Script%20Game"))()
+	end    
+})
+
+-- Tab18
+
+local Section = Tab18:AddSection({
+	Name = "JailBreak"
+})
+
+Tab18:AddButton({
+	Name = "Vortex",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/devnorb/vortexjb/main/loader.lua"))()
+	end    
+})
+
+-- Tab19
+
+local Section = Tab19:AddSection({
+	Name = "Strongert Battle"
+})
+
+Tab19:AddButton({
+	Name = "SpeedHub",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()
+	end    
+})
+
+-- Tab20
+
+local Section = Tab20:AddSection({
+	Name = "Haikyuu Legends"
+})
+
+Tab20:AddButton({
+	Name = "Script 1",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/SkibidiCen/MainMenu/main/Code"))()
+	end    
 })
