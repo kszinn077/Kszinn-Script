@@ -1,381 +1,227 @@
-local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
-local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
-local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/jensonhirst/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Kszinn Hub", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
-local Window = Fluent:CreateWindow({
-    Title = "Ks Hub",
-    SubTitle = "by Kszinn",
-    TabWidth = 160,
-    Size = UDim2.fromOffset(580, 460),
-    Acrylic = true,
-    Theme = "Darker",
-    MinimizeKey = Enum.KeyCode.LeftControl
+local Tab1 = Window:MakeTab({
+	Name = "Anime Fighters",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
 })
 
-local Tabs = {
-    AF = Window:AddTab({ Title = "Anime Fighters", Icon = "" }),
-    BF = Window:AddTab({ Title = "Blox Fruit", Icon = "" }),
-    KL = Window:AddTab({ Title = "King Legacy", Icon = "" }),
-    PSX = Window:AddTab({ Title = "Pet Sim X", Icon = "" }),
-    BL = Window:AddTab({ Title = "Blue Lock", Icon = "" }),
-    FB = Window:AddTab({ Title = "Fruit Battleground", Icon = "" }),
-    HL = Window:AddTab({ Title = "Haikyuu Legends", Icon = "" }),
-    AA = Window:AddTab({ Title = "Anime Adventures", Icon = "" }),
-    SB = Window:AddTab({ Title = "Strongert Battle", Icon = "" }),
-    BW = Window:AddTab({ Title = "Bed Wars", Icon = "" }),
-    PS = Window:AddTab({ Title = "Project Slayers", Icon = "" }),
-    BB = Window:AddTab({ Title = "Blade Ball", Icon = "" }),
-    MM = Window:AddTab({ Title = "Murder Mystery", Icon = "" }),
-    PS99 = Window:AddTab({ Title = "Pet Simulator 99", Icon = "" }),
-    SR = Window:AddTab({ Title = "Souls Rng", Icon = "" }),
-    D = Window:AddTab({ Title = "Doors", Icon = "" }),
-    PG = Window:AddTab({ Title = "Pets Go", Icon = "" }),
-    R = Window:AddTab({ Title = "Rivals", Icon = "" }),
-    SL = Window:AddTab({ Title = "Shindo Life", Icon = "" }),
-    AV = Window:AddTab({ Title = "Anime Vanguard", Icon = "" }),
-    JB = Window:AddTab({ Title = "JailBreak", Icon = "" })
-}
--- AnimeFighters
-
-Tabs.AF:AddParagraph({
-    Title = "Anime Fighters",
-    Content = ""
+local Tab2 = Window:MakeTab({
+	Name = "Blox Fruit",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
 })
 
-Tabs.AF:AddButton({
-    Title = "KJ Hub",
-    Description = "",
-    Callback = function()
-        loadstring(game.HttpGet(game, “https://raw.githubusercontent.com/KiJinGaming/FreeScript/main/KJHub.lua”))();
-    end})
-
-
-    Tabs.AF:AddButton({
-        Title = "Zer0Hub",
-        Description = "",
-        Callback = function()
-            loadstring(game:HttpGet(“https://raw.githubusercontent.com/Discord0000/Zer0Hub/main/MainScript.lua”))()
-        end})
-
--- Blox Fruit
-
-Tabs.BF:AddParagraph({
-    Title = "Blox Fruit",
-    Content = ""
+local Tab3 = Window:MakeTab({
+	Name = "King Legacy",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
 })
 
-Tabs.BF:AddButton({
-    Title = "W-Azure",
-    Description = "",
-    Callback = function()
+local Tab4 = Window:MakeTab({
+	Name = "Pet Sim X",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Tab5 = Window:MakeTab({
+	Name = "Blue Lock",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Tab6 = Window:MakeTab({
+	Name = "Fruit Battleground",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Tab7 = Window:MakeTab({
+	Name = "Anime Vanguard",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Tab8 = Window:MakeTab({
+	Name = "Anime Adventures",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Tab9 = Window:MakeTab({
+	Name = "Pet Simulator 99",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Tab10 = Window:MakeTab({
+	Name = "Bed Wars",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+-- Tab1
+
+local Section = Tab1:AddSection({
+	Name = "Anime Fighters"
+})
+
+Tab1:AddButton({
+	Name = "KJ Hub",
+	Callback = function()
+        loadstring(game.HttpGet(game, "https://raw.githubusercontent.com/KiJinGaming/FreeScript/main/KJHub.lua"))();
+  	end    
+})
+
+Tab1:AddButton({
+	Name = "Zer0 Hub",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Discord0000/Zer0Hub/main/MainScript.lua"))()
+  	end    
+})
+
+-- Tab2
+
+local Section = Tab2:AddSection({
+	Name = "Blox Fruit"
+})
+
+Tab2:AddButton({
+	Name = "W-Azure",
+	Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Actyrn/Scripts/main/AzureModded"))()
-    end})
-
-    Tabs.BF:AddButton({
-        Title = "Redz",
-        Description = "",
-        Callback = function()
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/realredz/BloxFruits/refs/heads/main/Source.lua"))()
-        end})
-
-    Tabs.BF:AddButton({
-        Title = "BielHub",
-        Description = "",
-        Callback = function()
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/THDEVZI/Biel-hub/refs/heads/main/bielhub.lua"))()
-        end})
-
-
--- King Legacy
-
-Tabs.KL:AddParagraph({
-    Title = "King Legacy",
-    Content = ""
+  	end    
 })
 
-Tabs.KL:AddButton({
-    Title = "Arc",
-    Description = "",
-    Callback = function()
+Tab2:AddButton({
+	Name = "Redz",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/realredz/BloxFruits/refs/heads/main/Source.lua"))()
+  	end    
+})
+
+Tab2:AddButton({
+	Name = "Biel Hub",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/THDEVZI/Biel-hub/refs/heads/main/bielhub.lua"))()
+  	end    
+})
+
+-- Tab3
+
+local Section = Tab3:AddSection({
+	Name = "King Legacy"
+})
+
+Tab3:AddButton({
+	Name = "Arc",
+	Callback = function()
         loadstring(game:HttpGet("https://cracklua.github.io/cracks/arc"))()
-    end})
-
--- Pet X
-
-Tabs.PSX:AddParagraph({
-    Title = "Pet Simulator X",
-    Content = ""
+  	end    
 })
 
-Tabs.PSX:AddButton({
-    Title = "Script 1",
-    Description = "",
-    Callback = function()
+-- Tab4
+
+local Section = Tab4:AddSection({
+	Name = "Pet Simulator X"
+})
+
+Tab4:AddButton({
+	Name = "Script 1",
+	Callback = function()
         loadstring(game:HttpGet('https://raw.githubusercontent.com/tobi437a/Scripts/refs/heads/main/b59ee2ebe2fb86dc85ef8d41.lua'))()
-    end})
-
--- Blue Lock
-
-Tabs.BL:AddParagraph({
-    Title = "Blue Lock",
-    Content = ""
+  	end    
 })
 
-Tabs.BL:AddButton({
-    Title = "Imp Hub",
-    Description = "",
-    Callback = function()
+-- Tab5
+
+local Section = Tab5:AddSection({
+	Name = "Blue Lock"
+})
+
+Tab5:AddButton({
+	Name = "ImpHub",
+	Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/alan11ago/Hub/refs/heads/main/ImpHub.lua"))()
-    end})
-
-    Tabs.BL:AddButton({
-        Title = "Express Hub",
-        Description = "",
-        Callback = function()
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/Theyfwdan/Theyfwdan/refs/heads/main/ExpressHubPaidVersion"))()
-        end})
-
--- Fruit Battleground
-
-Tabs.FB:AddParagraph({
-    Title = "Fruit Battleground",
-    Content = ""
+  	end    
 })
 
-Tabs.FB:AddButton({
-    Title = "Script 1",
-    Description = "",
-    Callback = function()
+Tab5:AddButton({
+	Name = "Express Hub",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Theyfwdan/Theyfwdan/refs/heads/main/ExpressHubPaidVersion"))()
+  	end    
+})
+
+-- Tab6
+
+local Section = Tab6:AddSection({
+	Name = "Fruit Battleground"
+})
+
+Tab6:AddButton({
+	Name = "Script 1",
+	Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/JumbleBumble/Scripts/main/FruitBattlegrounds.lua"))()
-    end})
-
-    Tabs.FB:AddButton({
-        Title = "Script 2",
-        Description = "",
-        Callback = function()
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/LOLking123456/battle551/main/fruit00"))()
-        end})
-
--- Haikyuu Legends
-
-Tabs.HL:AddParagraph({
-    Title = "Haikyuu Legends",
-    Content = ""
+  	end    
 })
 
-Tabs.HL:AddButton({
-    Title = "Script 1",
-    Description = "",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/SkibidiCen/MainMenu/main/Code"))()
-    end})
-
--- Anime Adventures
-
-Tabs.AA:AddParagraph({
-    Title = "Anime Adventures",
-    Content = ""
+Tab6:AddButton({
+	Name = "Script 2",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/LOLking123456/battle551/main/fruit00"))()
+  	end    
 })
 
-Tabs.AA:AddButton({
-    Title = "Script 1",
-    Description = "",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/ArponAG/Scripts/main/AnimeAdventures.lua"))()
-    end})
+-- Tab7
 
--- Strongert Battle
-
-Tabs.SB:AddParagraph({
-    Title = "Strongert Battle",
-    Content = ""
+local Section = Tab7:AddSection({
+	Name = "Anime Vanguard"
 })
 
-Tabs.SB:AddButton({
-    Title = "Speed Hub",
-    Description = "",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()
-    end})
-
--- Bed Wars
-
-Tabs.BW:AddParagraph({
-    Title = "Bed Wars",
-    Content = ""
-})
-
-Tabs.BW:AddButton({
-    Title = "Script 1",
-    Description = "",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
-    end})
-
--- Project Slayer
-
-Tabs.PS:AddParagraph({
-    Title = "Project Slayer",
-    Content = ""
-})
-
-Tabs.PS:AddButton({
-    Title = "Oni Hub",
-    Description = "",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Phyoue/Wlymalfrr/main/Wlymalfrr"))()
-    end})
-
-    Tabs.PS:AddButton({
-        Title = "Auto Dungeon Farm",
-        Description = "",
-        Callback = function()
-            loadstring(game:HttpGetAsync("https://gist.github.com/NotHubris/16fbe2bf8d9563e09858c5cd2c6fafce/raw"))()
-        end})
-
--- Blade Ball
-
-Tabs.BB:AddParagraph({
-    Title = "Blade Ball",
-    Content = ""
-})
-
-Tabs.BB:AddButton({
-    Title = "Chaotic",
-    Description = "",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Mc4121ban/trashscript/main/chaotic.lua"))()
-    end})
-
-    Tabs.BB:AddButton({
-        Title = "Plutonium",
-        Description = "",
-        Callback = function()
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/PawsThePaw/Plutonium.AA/main/Plutonium.Loader.lua", true))()
-        end})
-
--- Murder Mistery
-
-Tabs.MM:AddParagraph({
-    Title = "Murder Mistery",
-    Content = ""
-})
-
-Tabs.MM:AddButton({
-    Title = "Script 1",
-    Description = "",
-    Callback = function()
-        loadstring(game:HttpGet('https://darkscripts.space/scripts/1072446206241947649.lua',true))()
-    end})
-
--- Pet Simulator 99
-
-Tabs.PS99:AddParagraph({
-    Title = "Pet Simulator 99",
-    Content = ""
-})
-
-Tabs.PS99:AddButton({
-    Title = "Redz",
-    Description = "",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/PetSimulator99/main/redz9999.lua"))()
-    end})
-
--- Souls Rng
-
-Tabs.SR:AddParagraph({
-    Title = "Souls Rng",
-    Content = ""
-})
-
-Tabs.SR:AddButton({
-    Title = "Script 1",
-    Description = "",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Looser3itx/Hmmmmmmmmmmmmmmmmmmmmmmmmmmmm/main/loader.lua"))()
-    end})
-
--- Doors
-
-Tabs.D:AddParagraph({
-    Title = "Doors",
-    Content = ""
-})
-
-Tabs.D:AddButton({
-    Title = "Script 1",
-    Description = "",
-    Callback = function()
-        loadstring(game:HttpGet(('https://pastebin.com/raw/9QPGnLx6'),true))()
-    end})
-
--- Pets Go
-
-Tabs.PG:AddParagraph({
-    Title = "Pets Go",
-    Content = ""
-})
-
-Tabs.PG:AddButton({
-    Title = "Script 1",
-    Description = "",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/OhhMyGehlee/rel/refs/heads/main/el"))()
-    end})
-
--- Rivals
-
-Tabs.R:AddParagraph({
-    Title = "Rivals",
-    Content = ""
-})
-
-Tabs.R:AddButton({
-    Title = "Owl Hub",
-    Description = "",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
-    end})
-
--- Shindo Life
-
-Tabs.SL:AddParagraph({
-    Title = "Shindo Life",
-    Content = ""
-})
-
-Tabs.SL:AddButton({
-    Title = "Script 1",
-    Description = "",
-    Callback = function()
-        loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/ahmadsgamer2/Script--Game/main/Script%20Game"))()
-    end})
-
--- Anime Vanguard
-
-Tabs.AV:AddParagraph({
-    Title = "Anime Vanguard",
-    Content = ""
-})
-
-Tabs.AV:AddButton({
-    Title = "Script 1",
-    Description = "",
-    Callback = function()
+Tab7:AddButton({
+	Name = "Script 1",
+	Callback = function()
         loadstring(game:HttpGet("https://ryk.bloxteam.com/loader.lua"))()
-    end})
-
--- Jailbreak
-
-Tabs.JB:AddParagraph({
-    Title = "Jailbreak",
-    Content = ""
+  	end    
 })
 
-Tabs.JB:AddButton({
-    Title = "Script 1",
-    Description = "",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/devnorb/vortexjb/main/loader.lua"))()
-    end})
+-- Tab8
+
+local Section = Tab8:AddSection({
+	Name = "Anime Adventure"
+})
+
+Tab8:AddButton({
+	Name = "Script 1",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ArponAG/Scripts/main/AnimeAdventures.lua"))()
+  	end    
+})
+
+-- Tab9
+
+local Section = Tab9:AddSection({
+	Name = "Pet Simulator 99"
+})
+
+Tab9:AddButton({
+	Name = "Script 1",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/PetSimulator99/main/redz9999.lua"))()
+  	end    
+})
+
+-- Tab10
+
+local Section = Tab10:AddSection({
+	Name = "Bed Wars"
+})
+
+Tab10:AddButton({
+	Name = "Script 1",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
+  	end    
+})
