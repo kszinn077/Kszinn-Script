@@ -168,6 +168,20 @@ Tab2:AddButton({
   	end    
 })
 
+Tab2:AddButton({
+	Name = "Zoru Hub",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/pokelok/zoru-hub/main/01"))()
+  	end    
+})
+
+Tab2:AddButton({
+	Name = "Astral v1",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Overgustx2/Main/refs/heads/main/BloxFruits_25.html"))()
+    end    
+})
+
 -- Tab3
 
 local Section = Tab3:AddSection({
@@ -213,6 +227,21 @@ Tab5:AddButton({
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Theyfwdan/Theyfwdan/refs/heads/main/ExpressHubPaidVersion"))()
   	end    
 })
+
+Tab5:AddButton({
+	Name = "NS Hub Script",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/OhhMyGehlee/fo/refs/heads/main/ot"))
+  	end    
+})
+
+Tab5:AddButton({
+	Name = "Infinity Spin",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Theyfwdan/Theyfwdan/refs/heads/main/ExpressHubPaidVersion"))()
+  	end    
+})
+
 
 -- Tab6
 
